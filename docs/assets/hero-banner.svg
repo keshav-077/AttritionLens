@@ -1,0 +1,88 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#heroGradient)"/>
+  
+  <!-- Grid pattern overlay -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="300" fill="url(#grid)"/>
+  
+  <!-- Large lens icon -->
+  <g transform="translate(150, 80)">
+    <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="4"/>
+    <circle cx="70" cy="70" r="45" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+    <line x1="70" y1="20" x2="70" y2="35" stroke="white" stroke-width="3" opacity="0.6"/>
+    <line x1="70" y1="105" x2="70" y2="120" stroke="white" stroke-width="3" opacity="0.6"/>
+    <line x1="20" y1="70" x2="35" y2="70" stroke="white" stroke-width="3" opacity="0.6"/>
+    <line x1="105" y1="70" x2="120" y2="70" stroke="white" stroke-width="3" opacity="0.6"/>
+    
+    <!-- Handle -->
+    <rect x="110" y="110" width="30" height="6" rx="3" fill="white" opacity="0.6" transform="rotate(45 125 113)"/>
+  </g>
+  
+  <!-- Title text -->
+  <text x="350" y="130" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="white" filter="url(#glow)">
+    AttritionLens
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="350" y="170" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.9)">
+    HR Analytics Platform for Workforce Retention
+  </text>
+  
+  <!-- Metrics badges -->
+  <g transform="translate(350, 200)">
+    <!-- Accuracy badge -->
+    <rect x="0" y="0" width="140" height="40" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10B981" stroke-width="2"/>
+    <text x="70" y="27" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#10B981">
+      96.2% Acc
+    </text>
+    
+    <!-- AUC badge -->
+    <rect x="160" y="0" width="140" height="40" rx="20" fill="rgba(139,92,246,0.2)" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="230" y="27" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#A78BFA">
+      93.8% AUC
+    </text>
+    
+    <!-- ML badge -->
+    <rect x="320" y="0" width="180" height="40" rx="20" fill="rgba(251,146,60,0.2)" stroke="#F59E0B" stroke-width="2"/>
+    <text x="410" y="27" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#FCD34D">
+      Random Forest
+    </text>
+  </g>
+  
+  <!-- Decorative data visualization on right -->
+  <g transform="translate(900, 100)" opacity="0.4">
+    <!-- Bar chart stylized -->
+    <rect x="0" y="60" width="30" height="40" fill="#10B981" rx="3"/>
+    <rect x="40" y="30" width="30" height="70" fill="#3B82F6" rx="3"/>
+    <rect x="80" y="45" width="30" height="55" fill="#8B5CF6" rx="3"/>
+    <rect x="120" y="15" width="30" height="85" fill="#EC4899" rx="3"/>
+    <rect x="160" y="50" width="30" height="50" fill="#F59E0B" rx="3"/>
+    
+    <!-- Trend line -->
+    <polyline points="15,75 55,45 95,58 135,25 175,60" 
+              fill="none" stroke="white" stroke-width="3" opacity="0.8"/>
+    <circle cx="15" cy="75" r="4" fill="white"/>
+    <circle cx="55" cy="45" r="4" fill="white"/>
+    <circle cx="95" cy="58" r="4" fill="white"/>
+    <circle cx="135" cy="25" r="4" fill="white"/>
+    <circle cx="175" cy="60" r="4" fill="white"/>
+  </g>
+</svg>
